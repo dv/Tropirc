@@ -33,7 +33,7 @@ var httpd = http.createServer(function (req, res) {
 		var voicemail = files["filename"]
 
 		fs.rename(voicemail.path, path + voicemail.name)
-		bot.say("#zeus", "New voicemail @ " url + voicemail.name);
+		bot.say("#zeus", "New voicemail @ " + url + voicemail.name);
 
 		res.writeHead(200, {'content-type': 'text/plain'});
 		res.write('received');
